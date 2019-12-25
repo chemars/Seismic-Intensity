@@ -2,7 +2,7 @@
 export GMT_SESSION_NAME=$$	# Set a unique session name
 
 data=intensity.csv
-info=info.csv
+info=information.csv
 
 gmt begin intensity_map_2000 png A+m1c
 gmt basemap -Jm3c -R119/123/21/26 -Ba1 -B+t"Intensity Map"

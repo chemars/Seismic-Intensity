@@ -1,5 +1,5 @@
 clear all; close all; fclose all; clc;
-output = "info.csv";
+output = "information.csv";
 
 file_list = dir([pwd "\\data\\*.*"]);
 if size(file_list,1) == 0
