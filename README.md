@@ -9,11 +9,10 @@
 民生公共物聯網-資料服務平台，[感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_ncree.aspx)。
 
 ## 說明
-下載歷史資料，將解壓縮後的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`
+下載歷史資料，將解壓縮後的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`info.csv`（地震資訊），繪圖說明如下：
 
 ## 授權條款
-* 程式：[MIT 授權條款](https://github.com/chemars/Seismic-Intensity/blob/master/LICENSE)
-
+* [MIT 授權條款](https://github.com/chemars/Seismic-Intensity/blob/master/LICENSE)
 * `twmap.gmt`：
   * 內政部國土測繪中心 [2019] [直轄市、縣市界線(TWD97經緯度) mapdata201911261001.zip]
   * 此開放資料依政府資料開放授權條款 (Open Government Data License) 進行公眾釋出，使用者於遵守本條款各項規定之前提下，得利用之。
