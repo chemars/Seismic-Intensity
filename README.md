@@ -1,15 +1,18 @@
 # 震度
-以民生公共物聯網的地震儀資料計算中央氣象局地震震度並繪製震度圖。
+以民生公共物聯網的地震測站資料計算中央氣象局地震震度並繪製震度圖。
 
 ## 使用軟體
-1. [GNU Octave](https://www.gnu.org/software/octave/) 5.1.0（Windows-64）
-2. [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6.0.0（Ubuntu 18.04）
+* [GNU Octave](https://www.gnu.org/software/octave/) 5.1.0（Windows-64）
+* [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6.0.0（Ubuntu 18.04）
 
 ## 資料來源
-民生公共物聯網-資料服務平台，[感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_ncree.aspx)。
+民生公共物聯網-資料服務平台：[感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_ncree.aspx)
 
 ## 說明
 下載歷史資料，將解壓縮後的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`info.csv`（地震資訊），繪圖說明如下：
+* `plot.sh`：
+* `intensity_map_2000.sh`：
+* `intensity_map.sh`：
 
 ## 授權條款
 * [MIT 授權條款](https://github.com/chemars/Seismic-Intensity/blob/master/LICENSE)
