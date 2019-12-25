@@ -6,7 +6,7 @@ info=information.csv
 
 gmt begin intensity_map_2000 png A+m1c
 gmt basemap -Jm3c -R119/123/21/26 -Ba1 -B+t"Intensity Map"
-gmt pscoast -R119/120/25/26 -Di -W -M | gmt plot -W0.3p
+gmt coast -R119/120/25/26 -Di -W -M | gmt plot -W0.3p
 gmt plot twmap.gmt -W0.3p
 gawk 'BEGIN {FS=","}; {if ($5 == 1) print $3, $4, $5}' $data | gmt text -F+f12p,,black+jMC
 gawk 'BEGIN {FS=","}; {if ($5 == 2) print $3, $4, $5}' $data | gmt text -F+f12p,,blue+jMC
