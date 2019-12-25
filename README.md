@@ -15,8 +15,8 @@
 * 程式：[MIT 授權條款](https://github.com/chemars/Seismic-Intensity/blob/master/LICENSE)
 
 * `twmap.gmt`：
-  * 內政部國土測繪中心 [2019] [直轄市、縣市界線(TWD97經緯度)]
+  * 內政部國土測繪中心 [2019] [直轄市、縣市界線(TWD97經緯度) mapdata201911261001.zip]
   * 此開放資料依政府資料開放授權條款 (Open Government Data License) 進行公眾釋出，使用者於遵守本條款各項規定之前提下，得利用之。
   * 政府資料開放授權條款：https://data.gov.tw/license
 
-原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用[GDAL](https://gdal.org/)將SHP轉換為GMT格式，座標系統轉換為WGS84。
+  原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用[GDAL](https://gdal.org/)將SHP轉換為GMT格式，座標系統轉換為WGS84。
