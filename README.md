@@ -9,7 +9,7 @@
 民生公共物聯網-資料服務平台 [感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/environmental_eq_ncree.aspx)
 
 ## 說明
-下載歷史資料，將解壓縮後的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`info.csv`（地震資訊）。
+下載歷史資料，將解壓縮後的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`information.csv`（地震資訊）。
 
 繪圖程式可於 Ubuntu 18.04 執行，利用上述兩個檔案繪製震度圖，說明如下
 * `plot.sh`：中央氣象局地震震度（2000年版本）、海岸線，圖片名稱為`plot.png`
