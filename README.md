@@ -23,4 +23,9 @@
   * 此開放資料依政府資料開放授權條款 (Open Government Data License) 進行公眾釋出，使用者於遵守本條款各項規定之前提下，得利用之。
   * 政府資料開放授權條款：https://data.gov.tw/license
 
-  原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用[GDAL](https://gdal.org/)將SHP轉換為GMT格式，座標系統轉換為WGS84。
+  原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用 [GDAL](https://gdal.org/) 將 SHP 轉換為 GMT 格式，座標系統轉換為 WGS84。
+
+## 其他
+* [地震震度計算](https://github.com/chemars/Seismic-Intensity-Scales)
+* [測站震度輸出](https://github.com/chemars/Seismic-Intensity-Output)
+* [震度分布繪圖](https://github.com/chemars/Seismic-Intensity-Plot)
