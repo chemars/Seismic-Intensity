@@ -1,7 +1,7 @@
 clear all; close all; fclose all; clc;
 output = "information.csv";
 
-file_list = dir([pwd "\\data\\*.*"]);
+file_list = dir([pwd "\\data\\*.??t"]);
 if size(file_list,1) == 0
   error("No Data")
 endif

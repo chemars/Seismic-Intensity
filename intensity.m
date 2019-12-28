@@ -7,7 +7,7 @@ ns_column = 3;
 ew_column = 4;
 ud_column = 2;
 
-file_list = dir([pwd "\\data\\*.*"]);
+file_list = dir([pwd "\\data\\*.??t"]);
 if size(file_list,1) == 0
   error("No Data")
 endif
