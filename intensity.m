@@ -12,7 +12,7 @@ if size(file_list,1) == 0
   error("No Data")
 endif
 
-fid = fopen(output,"a");
+fid = fopen(output,"w");
 header = "Station code,Station name,Station longitude,Station latitude,CWB (2000),PGA (2000),CWB (2020),PGA (2020),PGV (2020)";
 fprintf(fid,"%s\n",header);
 fclose(fid);

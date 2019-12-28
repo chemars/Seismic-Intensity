@@ -6,7 +6,7 @@ if size(file_list,1) == 0
   error("No Data")
 endif
 
-fid = fopen(output,"a");
+fid = fopen(output,"w");
 header = "Origin Time (GMT+08),Epicenter Longitude (E),Epicenter Latitude (N),Depth (km),Magnitude (Ml)";
 fprintf(fid,"%s\n",header);
 fclose(fid);
