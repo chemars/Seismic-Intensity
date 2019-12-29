@@ -11,7 +11,7 @@
 ## 說明
 下載歷史資料並解壓縮，將裡面的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`information.csv`（地震資訊）。
 
-繪圖程式可於 Ubuntu 18.04 執行，使用`csv`檔案繪製震度圖，說明如下
+繪圖程式可於 Ubuntu 18.04 執行，讀取`csv`檔案繪製震度圖，說明如下
 * `plot.sh`：圖片顯示中央氣象局地震震度（2000年版本）、海岸線，名稱為`plot.png`
 * `intensity_map_2000.sh`：圖片顯示中央氣象局地震震度（2000年版本）、海岸線、直轄市及縣市界線，名稱為`intensity_map_2000.png`
 * `intensity_map.sh`：圖片顯示中央氣象局地震震度、海岸線、直轄市及縣市界線，名稱為`intensity_map.png`
