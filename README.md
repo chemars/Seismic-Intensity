@@ -16,6 +16,8 @@
 * `intensity_map_2000.sh`：圖片顯示中央氣象局地震震度（2000年版本）、海岸線、直轄市及縣市界線，名稱為`intensity_map_2000.png`
 * `intensity_map.sh`：圖片顯示中央氣象局地震震度、海岸線、直轄市及縣市界線，名稱為`intensity_map.png`
 
+圖片皆有顯示地震資訊，震度所用的顏色為[中央氣象局地震報告](https://scweb.cwb.gov.tw/zh-tw/earthquake/data)的顏色。
+
 ## 授權條款
 * [MIT 授權條款](https://github.com/chemars/Seismic-Intensity/blob/master/LICENSE)
 * `twmap.gmt`
