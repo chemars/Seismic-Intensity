@@ -21,9 +21,8 @@ for ii = 1:size(file_list,1)
   row6 = textscan(fileID,"%[^:] %*s %f",1);
   if (ii >= 2)
     if (row3{2} ~= longitude || row4{2} ~= latitude || row5{2} ~= depth || row6{2} ~= magnitude)
-      disp("Error")
       disp(file_list(ii).name)
-      break;
+      error("Information is not consistent")
     endif
     continue;
   endif
@@ -34,14 +33,12 @@ for ii = 1:size(file_list,1)
   magnitude = row6{2};
   fclose(fileID);
   if strncmp(char(row3{1}),"#EpicenterLongitude(E)",22) == 0
-    disp("Longitude Error")
     disp(file_list(ii).name)
-    break;
+    error("Longitude is not correct")
   endif
   if strncmp(char(row4{1}),"#EpicenterLatitude(N)",21) == 0
-    disp("Latitude Error")
     disp(file_list(ii).name)
-    break;
+    error("Latitude is not correct")
   endif
 
   fid = fopen(output,"a");
