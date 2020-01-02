@@ -13,7 +13,7 @@ if size(file_list,1) == 0
 endif
 
 fid = fopen(output,"w");
-header = "Station code,Station name,Station longitude (E),Station latitude (N),CWB Intensity 2000,PGA 2000 (gal),CWB Intensity,PGA (gal),PGV (cm/s)";
+header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWB Intensity 2000,PGA 2000 (gal),CWB Intensity,PGA (gal),PGV (cm/s)";
 fprintf(fid,"%s\n",header);
 fclose(fid);
 
