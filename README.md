@@ -28,6 +28,9 @@
   原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用 [GDAL](https://gdal.org/) 將 SHP 轉換為 GMT 格式，座標系統轉換為 WGS84。
 
 ## 其他
+### 參考資料
+* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20191210113759.pdf)
+### 相關程式
 * [地震震度計算](https://github.com/chemars/Seismic-Intensity-Scales)
 * [測站震度輸出](https://github.com/chemars/Seismic-Intensity-Output)
 * [震度分布繪圖](https://github.com/chemars/Seismic-Intensity-Plot)
