@@ -16,8 +16,8 @@
 
 ### 繪圖
 繪圖程式可於 Ubuntu 18.04 執行，讀取`csv`檔案繪製震度圖，圖片說明如下
-* `plot.sh`：顯示中央氣象局地震震度（2000年版本）分布、海岸線，名稱為`plot.png`
-* `intensity_map_2000.sh`：顯示中央氣象局地震震度（2000年版本）分布、海岸線、直轄市及縣市界線，名稱為`intensity_map_2000.png`
+* `plot.sh`：顯示中央氣象局地震震度（2000年修訂分級）分布、海岸線，名稱為`plot.png`
+* `intensity_map_2000.sh`：顯示中央氣象局地震震度（2000年修訂分級）分布、海岸線、直轄市及縣市界線，名稱為`intensity_map_2000.png`
 * `intensity_map.sh`：顯示中央氣象局地震震度分布、海岸線、直轄市及縣市界線，名稱為`intensity_map.png`
 
 圖片皆有顯示對應的地震資訊，震度所用的顏色為[中央氣象局地震報告](https://scweb.cwb.gov.tw/zh-tw/earthquake/data)的顏色。
