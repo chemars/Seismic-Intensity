@@ -24,6 +24,7 @@ for ii = 1:size(file_list,1)
       disp(file_list(ii).name)
       error("Information is not consistent")
     endif
+    fclose(fileID);
     continue;
   endif
   origin_time = char(row2{2});
