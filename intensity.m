@@ -1,13 +1,14 @@
 clear all; close all; fclose all; clc;
 pkg load signal
-output = "intensity.csv";
 delimiter = "";
 ignore_row = 22;
 ns_column = 3;
 ew_column = 4;
 ud_column = 2;
 
-file_list = dir([pwd "\\data\\*.??t"]);
+for ff = [2017001:2017060 2018001:2018139 2019001:2019020 2019022:2019066]
+output = ["intensity_" num2str(ff) ".csv"]
+file_list = dir([pwd "\\list\\" num2str(ff) "*\\*.??t"]);
 if size(file_list,1) == 0
   error("No Data")
 endif
@@ -18,7 +19,7 @@ fprintf(fid,"%s\n",header);
 fclose(fid);
 
 for ii = 1:size(file_list,1)
-  disp(ii)
+  #disp(ii)
   filename = [file_list(ii).folder "\\" file_list(ii).name];
   fileID = fopen(filename,"r");
   row8 = textscan(fileID,"%s %s",1,"HeaderLines",7);
@@ -37,7 +38,7 @@ for ii = 1:size(file_list,1)
   station_lat = row12{2};
   sample_rate = row16{2};
   fclose(fileID);  
-  disp("")
+  #disp("")
   if strncmp(char(row16{1}),"#SampleRate(Hz)",15) == 0
     disp("Sample Rate Error")
     disp(file_list(ii).name)
@@ -128,4 +129,5 @@ for ii = 1:size(file_list,1)
   fid = fopen(output,"a");
   fprintf(fid,"%s,%s,%.4f,%.4f,%.0f,%.3f,%s,%.3f,%.3f,%.3f\n",station_code,station_name,station_lon,station_lat,I_2k,pga_2k,I_new,pga_new,pgv,pgasum);
   fclose(fid);
+endfor
 endfor
