@@ -1,7 +1,8 @@
 clear all; close all; fclose all; clc;
-output = "information.csv";
 
-file_list = dir([pwd "\\data\\*.??t"]);
+for ff = [2017001:2017060 2018001:2018139 2019001:2019020 2019022:2019066]
+output = ["information_" num2str(ff) ".csv"]
+file_list = dir([pwd "\\list\\" num2str(ff) "*\\*.??t"]);
 if size(file_list,1) == 0
   error("No Data")
 endif
@@ -45,5 +46,6 @@ for ii = 1:size(file_list,1)
   fid = fopen(output,"a");
   fprintf(fid,"%s,%.2f,%.2f,%.1f,%.1f",origin_time,longitude,latitude,depth,magnitude);
   fclose(fid);
+endfor
 endfor
 disp("Finished")
