@@ -10,7 +10,7 @@
 
 ## 說明
 ### 計算
-下載歷史資料並解壓縮，將裡面的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`information.csv`（地震資訊），檔案格式如下
+選擇一個地震，下載歷史資料並解壓縮，將裡面的`*.dat`或`*.txt`放入`data`資料夾中，執行`intensity.m`及`information.m`，產生`intensity.csv`（測站資訊與震度資料）及`information.csv`（地震資訊），檔案格式如下
 * `intensity.csv`：測站代碼,測站名稱,測站經度,測站緯度,中央氣象局地震震度（舊制）,最大地動加速度（舊制）,中央氣象局地震震度,最大地動加速度,最大地動速度,最大合成地動加速度（未濾波）
 * `information.csv`：地震時間,震央經度,震央緯度,地震深度,地震規模
 
@@ -32,6 +32,7 @@
   原始資料來自[政府資料開放平臺](https://data.gov.tw/dataset/7442)，使用 [GDAL](https://gdal.org/) 將 SHP 轉換為 GMT 格式，座標系統轉換為 WGS84。
 
 ## 其他
+* 更多說明：[Wiki](https://github.com/chemars/Seismic-Intensity/wiki)
 * 參考資料：[交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20191210113759.pdf)
 * [地震震度計算](https://github.com/chemars/Seismic-Intensity-Scales)
 * [測站震度輸出](https://github.com/chemars/Seismic-Intensity-Output)
