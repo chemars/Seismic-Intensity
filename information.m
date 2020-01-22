@@ -36,8 +36,7 @@ for ii = 1:size(file_list,1)
   if strncmp(char(row3{1}),"#EpicenterLongitude(E)",22) == 0
     disp(file_list(ii).name)
     error("Longitude is not correct")
-  endif
-  if strncmp(char(row4{1}),"#EpicenterLatitude(N)",21) == 0
+  elseif strncmp(char(row4{1}),"#EpicenterLatitude(N)",21) == 0
     disp(file_list(ii).name)
     error("Latitude is not correct")
   endif
