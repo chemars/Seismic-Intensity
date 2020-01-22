@@ -1,11 +1,6 @@
 clear all; close all; fclose all; clc;
 pkg load signal
 output = "intensity.csv";
-delimiter = "";
-ignore_row = 22;
-ns_column = 3;
-ew_column = 4;
-ud_column = 2;
 
 file_list = dir([pwd "\\data\\*.??t"]);
 if size(file_list,1) == 0
@@ -42,22 +37,20 @@ for ii = 1:size(file_list,1)
     disp("Sample Rate Error")
     disp(file_list(ii).name)
     break;
-  endif
-  if isnumeric(sample_rate) == 0
+  elseif isnumeric(sample_rate) == 0
     disp("Sample Rate Number Error")
     disp(file_list(ii).name)
     break;
-  endif
-  if strncmp(char(row17{2}),"gal.",4) == 0
+  elseif strncmp(char(row17{2}),"gal.",4) == 0
     disp("Unit Error")
     disp(file_list(ii).name)
     break;
   endif
 
-  data = dlmread(filename,delimiter,ignore_row,0);
-  ns = data(:,ns_column);
-  ew = data(:,ew_column);
-  ud = data(:,ud_column);
+  data = dlmread(filename,"",22,0);
+  ns = data(:,3);
+  ew = data(:,4);
+  ud = data(:,2);
   pga_ns = max(abs(ns));
   pga_ew = max(abs(ew));
   pga_ud = max(abs(ud));
