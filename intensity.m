@@ -6,7 +6,6 @@ file_list = dir([pwd "\\data\\*.??t"]);
 if size(file_list,1) == 0
   error("No Data")
 endif
-
 fid = fopen(output,"w");
 header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWB Intensity 2000,PGA 2000 (gal),CWB Intensity,PGA (gal),PGV (cm/s),PGA(SUM) (gal)";
 fprintf(fid,"%s\n",header);
@@ -116,8 +115,8 @@ for ii = 1:size(file_list,1)
       I_new = "7";
     endif
   endif
-  pgasum = max(sqrt(ns.^2 + ew.^2 + ud.^2));
 
+  pgasum = max(sqrt(ns.^2 + ew.^2 + ud.^2));
   fid = fopen(output,"a");
   fprintf(fid,"%s,%s,%.4f,%.4f,%.0f,%.3f,%s,%.3f,%.3f,%.3f\n",station_code,station_name,station_lon,station_lat,I_2k,pga_2k,I_new,pga_new,pgv,pgasum);
   fclose(fid);
