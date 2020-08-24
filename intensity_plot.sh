@@ -6,7 +6,7 @@ info=information.csv
 ts=12p
 tt=0
 
-gmt begin plot png A+m1c
+gmt begin intensity_plot png A+m1c
 gmt basemap -Jm3c -R119/123/21/26 -Ba1 -B+t"Intensity Map"
 gmt coast -Df -W0.3p
 gawk 'BEGIN {FS=","}; {if ($5 == 0 || $5 == 1) print $3, $4, $5}' $data | gmt text -F+f$ts,$tt,black+jMC
