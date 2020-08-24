@@ -3,7 +3,7 @@ filename = "2020046.txt";
 output = "information.csv";
 
 fileID = fopen(filename,"r");
-rawdata = textscan(fileID,["%s%s%s%6c" repmat("%s%f",[1,10]) "%s%s%s%f%s%f"],"Delimiter",{",","="},"HeaderLines",5);
+rawdata = textscan(fileID,["%s%s%s%s" repmat("%s%f",[1,10]) "%s%s%s%f%s%f"],"Delimiter",{",","="},"HeaderLines",5);
 station_code = rawdata{2};
 station_name = rawdata{4};
 station_lon = rawdata{6};
