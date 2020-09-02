@@ -1,8 +1,11 @@
 clear all; close all; fclose all; clc;
-filename = "2020046";
-output = [filename "_new.csv"];
+filename = dir("*.txt");
+if size(filename,1) == 0
+  error("No Data")
+endif
+output = [filename(1).name(1:end-4) "_new.csv"];
 
-fileID = fopen([filename ".txt"],"r");
+fileID = fopen(filename(1).name,"r");
 rawdata = textscan(fileID,["%s%s%s%s" repmat("%s%f",[1,10]) "%s%s%s%f%s%f"],"Delimiter",{",","="},"HeaderLines",5);
 station_code = rawdata{2};
 station_name = rawdata{4};
