@@ -2,7 +2,7 @@ clear all; close all; fclose all; clc;
 url = "https://ci.taiwan.gov.tw/dsp/history/eq_cwb/";
 
 str = urlread(url);
-zipstr = regexp(str,'\s(\w*.zip)','tokens');
+zipstr = regexp(str,'\s(\w*\.zip)','tokens');
 filename = char(zipstr{end})
 urlwrite([url filename],filename);
 unzip(filename)
