@@ -35,6 +35,3 @@
 計算結果與相關圖片僅供參考，地震震度應以中央氣象局為準。
 * 更多說明：[Wiki](https://github.com/chemars/Seismic-Intensity/wiki)
 * 參考資料：[交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20191210113759.pdf)
-* [地震震度計算](https://github.com/chemars/Seismic-Intensity-Scales)
-* [測站震度輸出](https://github.com/chemars/Seismic-Intensity-Output)
-* [震度分布繪圖](https://github.com/chemars/Seismic-Intensity-Plot)
