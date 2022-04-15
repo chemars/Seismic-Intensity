@@ -2,8 +2,8 @@
 以民生公共物聯網的地震測站資料計算中央氣象局地震震度並繪製震度圖。
 
 ## 使用軟體
-* [GNU Octave](https://www.gnu.org/software/octave/) 5.1.0 Windows-64
-* [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6.0.0
+* [GNU Octave](https://www.gnu.org/software/octave/) Windows-64
+* [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6
 
 ## 資料來源
 民生公共物聯網-資料服務平台 [感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/dataset_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/dataset_eq_ncree.aspx) （[歷史資料](https://history.colife.org.tw/#/)）
