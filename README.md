@@ -6,7 +6,7 @@
 * [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6
 
 ## 資料來源
-民生公共物聯網-資料服務平台 [感測資料-中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/dataset_eq_cwb.aspx)、[感測資料-國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/dataset_eq_ncree.aspx) （[歷史資料](https://history.colife.org.tw/#/)）
+民生公共物聯網-資料服務平台 [中央氣象局地震監測站](https://ci.taiwan.gov.tw/dsp/Views/dataset/detail.aspx?id=earthquake_1)、[國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/Views/dataset/detail.aspx?id=earthquake_6) （[歷史資料](https://history.colife.org.tw/#/)）
 
 ## 說明
 ### 計算
