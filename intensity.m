@@ -7,7 +7,7 @@ if size(file_list,1) == 0
   error("No Data")
 endif
 fid = fopen(output,"w");
-header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWB Intensity 2000,PGA 2000 (gal),CWB Intensity,PGA (gal),PGV (cm/s),PGA(SUM) (gal)";
+header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWA Intensity 2000,PGA 2000 (gal),CWA Intensity,PGA (gal),PGV (cm/s),PGA(SUM) (gal)";
 fprintf(fid,"%s\n",header);
 fclose(fid);
 

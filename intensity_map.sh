@@ -17,5 +17,5 @@ gawk 'BEGIN {FS=","}; {if (NR > 1 && $7 != 0 && $7 != 1 && $7 != 2 && $7 != 3 &&
 gawk 'BEGIN {FS=","}; {if (NR > 1) print $2, $3}' $info | gmt plot -Gred -Sa0.5c
 gawk 'BEGIN {FS=","}; {if (NR > 1) print 119.2, 21.30, "Origin time: "$1}' $info | gmt text -F+f10p,,black+jML
 gawk 'BEGIN {FS=","}; {if (NR > 1) print 119.2, 21.15, "Magnitude: M@-L@-"$5"  Depth: "$4" km"}' $info | gmt text -F+f10p,,black+jML
-echo 119.2 21.45 "Intensity scale: CWB" | gmt text -F+f10p,,black+jML
+echo 119.2 21.45 "Intensity scale: CWA" | gmt text -F+f10p,,black+jML
 gmt end
