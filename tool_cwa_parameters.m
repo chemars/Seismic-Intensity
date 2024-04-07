@@ -18,7 +18,7 @@ fclose(fileID);
 
 [nrows,ncols] = size(station_code);
 fid = fopen(output,"w");
-header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWB Intensity,PGA (gal),PGV (cm/s)";
+header = "Station Code,Station Name,Station Longitude (E),Station Latitude (N),CWA Intensity,PGA (gal),PGV (cm/s)";
 fprintf(fid,"%s\n",header);
 formatSpec = "%s,%s,%.2f,%.2f,%s,%.2f,%.2f\n";
 for row = 1:nrows-1
