@@ -2,8 +2,8 @@
 以民生公共物聯網的地震測站資料計算中央氣象署地震震度並繪製震度圖。
 
 ## 使用軟體
-* [GNU Octave](https://www.gnu.org/software/octave/) Windows-64
-* [Generic Mapping Tools](https://www.generic-mapping-tools.org/) 6
+* [GNU Octave](https://octave.org) Windows-64
+* [Generic Mapping Tools](https://www.generic-mapping-tools.org/) GMT 6
 
 ## 資料來源
 民生公共物聯網-資料服務平台 [中央氣象署地震監測站](https://ci.taiwan.gov.tw/dsp/Views/dataset/detail.aspx?id=earthquake_1)、[國家地震工程研究中心地震監測站](https://ci.taiwan.gov.tw/dsp/Views/dataset/detail.aspx?id=earthquake_6) （[歷史資料](https://history.colife.org.tw/#/)）
@@ -15,7 +15,7 @@
 * `information.csv`：地震時間,震央經度,震央緯度,地震深度,地震規模
 
 ### 繪圖
-繪圖程式可於 Ubuntu 18.04 執行，讀取`csv`檔案繪製震度圖，圖片說明如下
+繪圖程式可於 Ubuntu 22.04 執行，讀取`csv`檔案繪製震度圖，圖片說明如下
 * `intensity_plot.sh`：顯示中央氣象署地震震度（舊制）分布、海岸線
 * `intensity_map_2000.sh`：顯示中央氣象署地震震度（舊制）分布、海岸線、直轄市及縣市界線
 * `intensity_map.sh`：顯示中央氣象署地震震度分布、海岸線、直轄市及縣市界線
