@@ -1,18 +1,30 @@
 clear all; close all; fclose all; clc;
-url = "https://ci.taiwan.gov.tw/dsp/history/eq_cwb/";
+authorization = "";
+if isempty(authorization)
+    error("Require Authorization. See https://opendata.cwa.gov.tw/about/application/general")
+endif
 
-str = urlread(url);
-zipstr = regexp(str,'\s(\w*\.zip)','tokens');
-filename = char(zipstr{end})
-urlwrite([url filename],filename);
-unzip(filename)
+json_name = "E-A0015-004.json";
+urlwrite(["https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/E-A0015-004?Authorization=" authorization "&downloadType=WEB&format=JSON"],json_name);
+jsonStr = fileread(json_name);
+jsonData = jsondecode(jsonStr);
+file_name = [jsonData.cwaopendata.Dataset.Resource.ResourceDesc "." jsonData.cwaopendata.Dataset.Resource.MimeType]
+if isfile(file_name)
+    error("Already Download")
+endif
 
+urlwrite(jsonData.cwaopendata.Dataset.Resource.ProductURL,file_name);
+unzip(file_name);
 tmp = dir([pwd "\\2*\\*.??t"]);
 for ii = 1:size(tmp,1)
   movefile([tmp(ii).folder "\\" tmp(ii).name],"data");
 endfor
-delete *.zip *.dat *.xml
 rmdir(tmp(1).folder);
 
+eqyr = jsonData.cwaopendata.Dataset.Resource.ResourceDesc(1:4);
+eqnum = jsonData.cwaopendata.Dataset.Resource.ResourceDesc(1:7)
+urlwrite(["https://scweb.cwa.gov.tw/zh-tw/earthquake/download?file=%2FdrawTrace%2Foutcome%2F" eqyr "%2F" eqnum ".txt"],[eqnum ".txt"]);
+
+tool_cwa_parameters
 intensity
 information
