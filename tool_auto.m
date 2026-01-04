@@ -15,9 +15,9 @@ endif
 
 urlwrite(jsonData.cwaopendata.Dataset.Resource.ProductURL,file_name);
 unzip(file_name);
-tmp = dir([pwd "\\2*\\*.??t"]);
+tmp = dir(fullfile(pwd, "2*", "*.??t"));
 for ii = 1:size(tmp,1)
-  movefile([tmp(ii).folder "\\" tmp(ii).name],"data");
+  movefile(fullfile(tmp(ii).folder, tmp(ii).name), "data");
 endfor
 rmdir(tmp(1).folder);
 

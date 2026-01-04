@@ -2,7 +2,7 @@ clear all; close all; fclose all; clc;
 pkg load signal
 output = "intensity.csv";
 
-file_list = dir([pwd "\\data\\*.??t"]);
+file_list = dir(fullfile(pwd, "data", "*.??t"));
 if size(file_list,1) == 0
   error("No Data")
 endif
@@ -13,7 +13,7 @@ fclose(fid);
 
 for ii = 1:size(file_list,1)
   disp(ii)
-  filename = [file_list(ii).folder "\\" file_list(ii).name];
+  filename = fullfile(file_list(ii).folder, file_list(ii).name);
   fileID = fopen(filename,"r");
   row8 = textscan(fileID,"%s %s",1,"HeaderLines",7);
   row9 = textscan(fileID,"%[^:] %*s %s",1);
